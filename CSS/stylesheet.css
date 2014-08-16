@@ -1,0 +1,98 @@
+body
+{
+	background-color : #b5cfe7;
+}
+
+#page
+{
+	background-color : white;
+	margin           : 50px auto;
+	padding          : 50px;
+	width            : 900px;
+	box-shadow       : 10px 10px 5px #888;
+}
+
+p
+{
+	text-align       : justify;
+	text-justify     : inter-word;
+	text-indent      : 30px;
+	font-family      : sans-serif;
+}
+
+.infoCard
+{
+	border           : 1px solid black;
+	margin-left      : auto;
+	margin-right     : auto;
+	padding          : 5px 10px;
+	width            : 500px;
+}
+
+.infoCard p
+{
+	line-height      : 0.1;
+	text-indent      : 0px;
+}
+
+.image
+{
+	margin           : 50px auto;
+	width            : 500px;
+}
+
+.image p
+{
+	font-style       : italic;
+	line-height      : 0.1;
+	text-align       : center;
+	text-indent      : 0px;
+}
+
+.image img
+{
+	margin-left      : auto;
+	margin-right     : auto;
+	display          : block;
+}
+
+.video
+{
+	margin-left      : auto;
+	margin-right     : auto;
+	width            : 430px;
+}
+
+.video iframe
+{
+	width            : 560px;
+	height           : 315px;
+}
+
+hr
+{
+	border           : 0;
+	width            : 800px;
+	height           : 1px;
+	margin-top       : 0px;
+	margin-bottom    : 40px;
+	background-image : -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image : -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image : -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+	background-image : -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+h1
+{
+	text-align       : center;
+	margin-bottom    : 0px;
+	margin-top       : 40px;
+}
+
+.marco
+{
+	border           : 1px solid black;
+	padding          : 20px;
+	margin-top       : 20px;
+	margin-bottom    : 20px;
+}
