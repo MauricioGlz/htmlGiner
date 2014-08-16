@@ -1,0 +1,126 @@
+/* -------------------------------------------------
+	Ejercicio 1
+	------------------------------------------------ */
+
+#ej1 a:link
+{
+	color: red;
+}
+
+#ej1 a:hover
+{
+	color: white;
+	background-color: red;
+}
+
+#ej1 a:visited
+{
+	color: #CCC;
+}
+
+/* -------------------------------------------------
+	Ejercicio 2
+	------------------------------------------------ */
+
+#ej2 .cuadro
+{
+	background-color: #f3ecdb;
+	border: 1px solid #eae3d2;
+	padding: 0px 22px;
+}
+
+#ej2 .left
+{
+	float: left;
+}
+
+#ej2 .right
+{
+	float: right;
+}
+
+.clear
+{
+	clear: both;
+}
+
+/* -------------------------------------------------
+	Ejercicio 3
+	------------------------------------------------ */
+
+#ej3 #page1
+{
+	border: 1px solid black;
+}
+
+#ej3 #title div
+{
+	border: 1px solid black;
+}
+
+#ej3 #title img
+{
+	float: left;
+	width: 200px;
+	height: 200px;
+}
+
+#ej3 #title #textTitle
+{
+	height: 199px;
+	padding-left: 50px;
+	line-height: 200px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+	background: #9ccbf5;
+}
+
+#ej3 #menu
+{
+	background-color: #403f3d;
+	color: white;
+	margin-top: 0px;
+}
+
+#ej3 #menu ul
+{
+	list-style: none;
+	margin-bottom: 5px;
+	margin-top: 0px;
+	padding-bottom: 5px;
+	padding-left: 0px;
+	padding-top: 5px;
+}
+
+#ej3 #menu li
+{
+	float: left;
+	display: block;
+	width: 150px;
+	
+	font-weight: bold;
+	text-align: center;
+}
+
+#ej3 #body
+{
+	background-color: #fcf9c8;
+	padding: 10px 20px 50px 20px;
+}
+
+#ej3 #body p
+{
+	text-indent: 30px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+#ej3 #footer
+{
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: #9ccbf6;
+	text-align: center;
+	border: 2px solid black;
+}
