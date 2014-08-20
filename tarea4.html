@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Tarea 4. Funciones Javascript</title>
+	<link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
+	<script type="text/javascript" src="js/tarea4.js"></script>
+
+</head>
+<body>
+
+	<div id="page">
+		
+		<h1>Ejercicio 1</h1>
+		<hr />
+		<blockquote>Desarrolle las siquientes funciones en Javascript para calcular lo que se solicita</blockquote>
+
+		<div id="ej1">
+			
+			<img src="images/areaTriangulo.png" />
+			<form name="formTriangulo">
+				<table>
+					<tr>
+						<td>Base:</td>
+						<td><input type="text" name="base" /></td>
+					</tr>
+					<tr>
+						<td>Altura: </td>
+						<td><input type="text" name="altura" /></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="Calcular" onclick="calcularAreaTriangulo();" /></td>
+						<td><input type="text" name="resultado" /></td>
+					</tr>
+				</table>
+			</form>
+
+			<img src="images/areaCuadrado.png" />
+			<form name="formCuadrado">
+				<table>
+					<tr>
+						<td>Base:</td>
+						<td><input type="text" name="base" /></td>
+					</tr>
+					<tr>
+						<td>Altura: </td>
+						<td><input type="text" name="altura" /></td>
+					</tr>
+					<tr>
+						<td><input type="button" value="Calcular" onclick="calcularAreaCuadrado();" /></td>
+						<td><input type="text" name="resultado" /></td>
+					</tr>
+				</table>
+			</form>
+
+		</div>
+
+		<h1>Ejercicio 2</h1>
+		<hr />
+		<blockquote>El siguiente programa tiene errores que hay que corregir. Se trata de listar en un formulario del tipo textarea una lista de valores de grados centígrados a grados Farenheit. Efectuar las correcciones para que funcione</blockquote>
+
+		<div id="ej2">
+			<form name="tepmperaturaForm">
+				<input type="text" name="grados" />
+				<input type="button" value="Calcular" onclick="convertirTemperatura(tepmperaturaForm.grados.value);" />
+			</form>
+		</div>
+
+		<h1>Ejercicio 3</h1>
+		<hr />
+		<blockquote>Realizar un menu, con una lista de formulario del tipo select, con 4 opciones diferentes, de manera que al seleccionar un elemento de la lista, se actualice a su vez una imagen del documento.</blockquote>
+
+		<div id="ej3">
+			<select id="select" onchange="cambiarImagen();">
+				<option>Imagen 1</option>
+				<option>Imagen 2</option>
+				<option>Imagen 3</option>
+			</select>
+			<br />
+			<div><img id="imagen" src="images/img0.jpg"></div>
+		</div>
+
+		<h1>Ejercicio 4</h1>
+		<hr />
+		<blockquote> Realizar una página que permita controlar la posición y tamaño de una ventana a través de un pequeño formulario</blockquote>
+
+		<div id="ej4">
+			<form name="windowForm">
+				<table>
+					<tr>
+						<td colspan="2">Dimensiones</td>
+						<td colspan="2">Pocisión</td>
+					</tr>
+					<tr>
+						<td>Ancho:</td>
+						<td><input type="text" name="widthProperty" /></td>
+						<td>x:</td>
+						<td><input type="text" name="xProperty" /></td>
+					</tr>
+					<tr>
+						<td>Alto:</td>
+						<td><input type="text" name="heightProperty" /></td>
+						<td>Y:</td>
+						<td><input type="text" name="yProperty" /></td>
+					</tr>
+					<tr>
+						<td colspan="4"><input type="button" value="Cambiar" onclick="changeWindow();"></td>
+					</tr>
+
+				</table>
+			</form>
+		</div>
+
+	</div>
+
+</body>
+</html>
