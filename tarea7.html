@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
+	<!-- Color de sintaxis -->
+	<link rel="stylesheet" type="text/css" href="CSS/sh/shCore.css">
+	<link rel="stylesheet" type="text/css" href="CSS/sh/shThemeRDark.css">
+	<script type="text/javascript" src="js/sh/shCore.js"></script>
+	<script type="text/javascript" src="js/sh/shBrushPhp.js"></script>
+	<script type="text/javascript" src="js/sh/shBrushXml.js"></script>
+
+	<title>Tarea 7. PHP</title>
+</head>
+<body>
+
+<div id="page">
+	<h1>Ejercicio 1</h1>
+	<hr />
+	<blockquote>
+		Dado el siguiente código en PHP, identifique los errores posibles y corríjalos con la finalidad de que el programa funcione sin error alguno
+		<script type="syntaxhighlighter" class="brush: php"><![CDATA[
+			<html><head><title>Actividad 1</title></head>
+			<body>
+			<?php
+			function actividad1($numero) {
+			lista[] = 2;
+			for (int i = 3; i <= numero; i++) {
+			$es = TRUE
+			foreach ($lista as $j) {
+			if $i % $j = 0 then
+			$es = FALSE;
+			break;
+			}
+			if ($es)
+			$lista[] = $i;
+			}
+			return $lista;
+			}
+			$resultado = actividad1(200);
+			foreach ($resultado as $r) {
+			echo '$r<br>';
+			}
+			?>
+			</body></html>
+		]]></script>
+	</blockquote>
+
+	<p>Con las correcciones el codigo queda de la siguiente manera:</p>
+
+	<script type="syntaxhighlighter" class="brush: php"><![CDATA[
+			<html>
+			<head>
+				<title>Actividad 1</title>
+			</head>
+			<body>
+
+			<?php
+
+			function actividad1($numero)
+			{
+				/* Agregado del simbolo $ */
+				$lista[] = 2;
+				/* Agregar $, eliminación del int */
+				for ($i = 3; $i <= $numero; $i++)
+				{
+					/* Punto y coma */
+					$es = TRUE;
+					foreach ($lista as $j)
+					{
+						/* Cambio de = por ==, agregado de parentesis, eliminación del then, agregado de llaves */
+						if ($i % $j == 0)
+						{
+							$es = FALSE;
+							break;
+						}
+					}
+					if ($es)
+						$lista[] = $i;
+				}
+				return $lista;
+			}
+
+			/* Punto y coma */
+			$resultado = actividad1(200);
+			foreach ($resultado as $r)
+			{
+				echo "$r<br>";
+			}
+
+			/* Cierre de etiqueta php */
+			?>
+
+			</body>
+			</html>
+	]]></script>
+
+	<p><a href="php/t7e1.php">Enlace</a></p>
+
+	<h1>Ejercicio 2</h1>
+	<hr />
+	<blockquote> Desarrolle un programa en PHP que dado un archivo de texto, imprime su contenido</blockquote>
+
+	<p><a href="php/t7e2.php">Enlace</a></p>
+
+	<h1>Ejercicio 3</h1>
+	<hr />
+	<blockquote>
+		Dado el siguiente código en PHP:<br />
+		form.php
+		<script type="syntaxhighlighter" class="brush: html"><![CDATA[
+			<form action="respuesta.php?valor=10" method="post">
+				<input type="text" name="nombre">
+			</form>
+		]]></script>
+		¿Cuál de las siguientes opciones es correcta?<br />
+		respuesta.php
+		<script type="syntaxhighlighter" class="brush: php"><![CDATA[
+			<?
+			echo 'valor: ' . $_GET['valor'] . '<br>';
+			echo 'valor: ' . $_POST['valor'] . '<br>';
+			echo 'valor: ' . $_REQUEST['valor'] . '<br>';
+			echo 'nombre: ' . $_GET['nombre'] . '<br>';
+			echo 'nombre: ' . $_POST['nombre'] . '<br>';
+			echo 'nombre: ' . $_REQUEST['nombre'] . '<br>';
+			?>
+		]]></script>
+	</blockquote>
+
+	<p>Son correctas las siguientes opciones:</p>
+
+	<script type="syntaxhighlighter" class="brush: php"><![CDATA[
+		echo ('valor: ' . $_GET['valor'] . '<br>');
+		echo 'valor: ' . $_REQUEST['valor'] . '<br>';
+		echo 'nombre: ' . $_POST['nombre'] . '<br>';
+		echo 'nombre: ' . $_REQUEST['nombre'] . '<br>';
+	]]></script>
+
+</div>
+
+<script type="text/javascript">
+	 SyntaxHighlighter.all();
+</script>
+
+</body>
+</html>
