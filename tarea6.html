@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="CSS/stylesheet.css">
+	<title>Tarea 6. C&oacute;mputo distribuido</title>
+</head><body>
+
+<div id="page">
+	<h1>Ejercicio 1</h1>
+	<hr />
+	<blockquote> Describa los siguientes conceptos de c&oacute;mputo distribuido</blockquote>
+
+	<ul>
+		<li>RPC</li>
+		<p>En espa&ntilde;ol es <b>llamada de procedimiento remoto</b>, b&aacute;sicamente consiste en la creaci&oacute;n de una subrutina o una funci&oacute;n que se va a ocupar en mas de una computadora. Se crea como una funci&oacute;n cualquiera con la excepci&oacute;n de que esta se ejecutara en una computadora o servidor en espec&iacute;fico y puede ser llamada por medio de cualquier computadora que se encuentre en red o que cumpla con los requisitos espec&iacute;ficos.</p>
+
+		<li>CORBA</li>
+		<p><b>CORBA</b> o &quot;<b>Common Object Request Broker Arquitecture</b>&quot; es un estandar definido para facilitar la comunicaci&oacute;n entre diferentes lenguajes y sistemas. A pesar de estar hecho con un enfoque orientado a objetos, ya que se basa en los mismos principios como la encapsulaci&oacute;n y la reutilizaci&oacute;n, los sistemas que trabajan con CORBA rara vez son orientados a objetos.</p>
+
+		<li>DCOM</li>
+		<p><b>Distributed Component Object Model</b>, es la tecnolog&iacute;a usada por <b>Microsoft</b> para comunicar diferentes componentes en redes distribuidas. DCOM existe para resolver diferentes problemas en los que se encuentran:</p>
+
+		<ul>
+			<li>La estandarizaci&oacute;n de los objetos que necesitan ser convertidos para ser enviados a trav&eacute;s de la red.</li>
+			<li>Asegurarse de que la informaci&oacute;n del lado del cliente sea desechada al momento de que exista un crash o se pierda la conexi&oacute;n.</li>
+			<li>Especificar una forma de enviar un sin fin de objetos en una sola transmisi&oacute;n para ahorrar ancho de banda.</li>
+		</ul><br />
+
+		<li>JAVA RMI</li>
+		<p><b>Java Remote Method Invocation</b>, es una API de JAVA que permite llamadas RPC, es bastante similar a DCOM, con la excepci&oacute;n de que as&iacute; como DCOM se usa para las diferentes llamadas entre Microsoft este, como su nombre lo indica, se usa entre maquinas virtuales de JAVA.</p>
+	</ul>
+
+	<h1>Ejercicio 2</h1>
+	<hr />
+	<blockquote> Realice una tabla comparativa ejemplificando las ventajas y desventajas de cada uno de los conceptos del ejercicio 1</blockquote>
+
+	<table border="1" style="border-collapse: collapse;">
+		<tr>
+			<th>Concepto</th>
+			<th>Ventajas</th>
+			<th>Desventajas</th>
+		</tr>
+		<tr>
+			<th>RPC</th>
+			<td><ul>
+				<li>Es independiente del servidor.</li>
+				<li>Permite modelos tanto orientado a procesos como orientado a hilos.</li>
+				<li>Facilita los sistemas distribuidos.</li>
+				<li>Se minimiza el trabajo al momento de la reutilizaci&oacute;n de c&oacute;digo.</li>
+				<li>Permite el uso de aplicaciones distribuidas y no solo en un &aacute;mbito local.</li>
+				<li>Permite interoperabilidad entre <b>CORBA</b> y <b>ORB</b></li>
+			</ul></td>
+			<td><ul>
+				<li>No es un estandar.</li>
+				<li>No resuelve la mayor&iacute;a de los problemas.</li>
+				<li>Solo se enfoca en la interacci&oacute;n, no ofrece flexibilidad en temrinos de hardware o de arquitectura.</li>
+				<li>Requiere el uso de <b>TCP/IP</b>, cualquier otro medio aun no es soportado</li>
+				<li>A&uacute;n no se ha probado en redes de &aacute;rea amplia</li>
+			</ul></td>
+		</tr>
+		<tr>
+			<th>CORBA</th>
+			<td><ul>
+				<li>El cliente no necesita saber donde corre una aplicaci&oacute;n</li>
+				<li>El cliente no puede encontrar de donde provienen las aplicaciones, para &eacute;l no existen servidores</li>
+				<li>Las aplicaciones entre cliente y servidor pueden estar escritos en diferentes lenguajes</li>
+			</ul></td>
+			<td><ul>
+				<li>Dificil de hacerlo funcionar en medio de firewalls ya que no permite el mapeo de puertos</li>
+				<li>Las implementaciones varian</li>
+			</ul></td>
+		</tr>
+		<tr>
+			<th>DCOM</th>
+			<td><ul>
+				<li>Mecanismo eficiente para el mantenimiento</li>
+				<li>Permite modificar componentes sin afectar la aplicaci&oacute;n</li>
+			</ul></td>
+			<td><ul>
+				<li>No es un estandar abierto</li>
+				<li>Es deficiente en un ambiente desconectado</li>
+				<li>Complejo en C++</li>
+				<li>No trabaja bien en medio de firewalls</li>
+				<li>Esta hecho unicamente para <b>Windows</b></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<th>JAVA RMI</th>
+			<td><ul>
+				<li>Facil de empezar</li>
+				<li>Maneja hilos y sockets</li>
+				<li>Carga de clases externas</li>
+			</ul></td>
+			<td><ul>
+				<li>Estrictamente JAVA</li>
+				<li>Problemas de seguridad</li>
+				<li>Problemas cuando la conexi&oacute;n se rompe</li>
+			</ul></td>
+		</tr>
+	</table>
+
+	<h1>Ejercicio 3</h1>
+	<hr>
+
+	<blockquote> Describa el concepto de estilo arquitect&oacute;nico. Mencione al menos 3 estilos arquitect&oacute;nico de c&oacute;mputo distribuido y explica brevemente en qu&eacute; consiste cada uno de ellos</blockquote>
+
+	<ul>
+		<li><b>Arquitectura cliente-servidor</b>. Las tarease se reparten en servidores.</li>
+		<li><b>Arquitectura editor-subscriptor</b>. Parecido al cliente cliente-servidor con la diferencia de que existe un elemento intermedio, en el cliente servidor cada cliente se conecta con el respectivo servidor, en el editor-subscriptor cada cliente esta conectado a un pool de donde se escoge el servidor mas apropiado.</li>
+		<li><b>Arquitectura P2P</b>. En esta arquitetura no se usan los servidores, en lugar de ello se tienen una serie de computadoras conectadas entre si como iguales</li>
+	</ul>
+
+	<h1>Ejercicio 4</h1>
+	<hr />
+	<blockquote> Describa las ventajas de un estilo arquitect&oacute;nico basado en capas</blockquote>
+
+	<p>La principal ventaja que tenemos en un modelo arquitect&oacute;nico basado en capas es que se pueden cambiar los datos sin necesidad de cambiar los elementos intermedios, esto nos permite darle un mantenimiento más facil ya que no tenemos que preocuparnos por afectar elementos de otras capas.</p>
+
+	<p>Otra de las ventajas principales en este estilo es que nos brinda mas seguridad dado que podemos aislar datos y funciones en diferentes capas a nuestro gusto.</p>
+
+</div>
+
+</body>
+</html>
