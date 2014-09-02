@@ -19,13 +19,13 @@
 	<hr />
 	<blockquote>
 		Dado el siguiente código en PHP, identifique los errores posibles y corríjalos con la finalidad de que el programa funcione sin error alguno
-		<script type="syntaxhighlighter" class="brush: php"><![CDATA[
-			<html><head><title>Actividad 1</title></head>
-			<body>
-			<?php
+		<pre class="brush: php">
+			&lt;html&gt;&lt;head&gt;&lt;title&gt;Actividad 1&lt;/title&gt;&lt;/head&gt;
+			&lt;body&gt;
+			&lt;?php
 			function actividad1($numero) {
 			lista[] = 2;
-			for (int i = 3; i <= numero; i++) {
+			for (int i = 3; i &lt;= numero; i++) {
 			$es = TRUE
 			foreach ($lista as $j) {
 			if $i % $j = 0 then
@@ -39,36 +39,36 @@
 			}
 			$resultado = actividad1(200);
 			foreach ($resultado as $r) {
-			echo '$r<br>';
+			echo '$r&lt;br&gt;';
 			}
-			?>
-			</body></html>
-		]]></script>
+			?&gt;
+			&lt;/body&gt;&lt;/html&gt;
+		</pre>
 	</blockquote>
 
 	<p>Con las correcciones el codigo queda de la siguiente manera:</p>
 
-	<script type="syntaxhighlighter" class="brush: php"><![CDATA[
-			<html>
-			<head>
-				<title>Actividad 1</title>
-			</head>
-			<body>
+	<pre class="brush: php">
+			&lt;html&gt;
+			&lt;head&gt;
+				&lt;title&gt;Actividad 1&lt;/title&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
 
-			<?php
+			&lt;?php
 
 			function actividad1($numero)
 			{
 				/* Agregado del simbolo $ */
 				$lista[] = 2;
-				/* Agregar $, eliminación del int */
-				for ($i = 3; $i <= $numero; $i++)
+				/* Agregar $, eliminaci&oacute;n del int */
+				for ($i = 3; $i &lt;= $numero; $i++)
 				{
 					/* Punto y coma */
 					$es = TRUE;
 					foreach ($lista as $j)
 					{
-						/* Cambio de = por ==, agregado de parentesis, eliminación del then, agregado de llaves */
+						/* Cambio de = por ==, agregado de parentesis, eliminaci&oacute;n del then, agregado de llaves */
 						if ($i % $j == 0)
 						{
 							$es = FALSE;
@@ -85,15 +85,15 @@
 			$resultado = actividad1(200);
 			foreach ($resultado as $r)
 			{
-				echo "$r<br>";
+				echo "$r&lt;br&gt;";
 			}
 
 			/* Cierre de etiqueta php */
-			?>
+			?&gt;
 
-			</body>
-			</html>
-	]]></script>
+			&lt;/body&gt;
+			&lt;/html&gt;
+	</pre>
 
 	<p><a href="php/t7e1.php">Enlace</a></p>
 
@@ -103,15 +103,15 @@
 
 	<p>Código:</p>
 
-	<script type="syntaxhighlighter" class="brush: php"><![CDATA[
-		<?php
+	<pre class="brush: php">
+		&lt;?php
 
 		$myfile = fopen("../raw/Lorem Ipsum.txt", "r") or die("No se pudo abrir el archivo");
 		echo fread($myfile, filesize("../raw/Lorem Ipsum.txt"));
 		fclose($myfile);
 
-		?>	
-	]]></script>
+		?&gt;	
+	</pre>
 
 	<p><a href="php/t7e2.php">Enlace</a></p>
 
@@ -120,33 +120,33 @@
 	<blockquote>
 		Dado el siguiente código en PHP:<br />
 		form.php
-		<script type="syntaxhighlighter" class="brush: html"><![CDATA[
-			<form action="respuesta.php?valor=10" method="post">
-				<input type="text" name="nombre">
-			</form>
-		]]></script>
+		<pre class="brush: html">
+			&lt;form action="respuesta.php?valor=10" method="post"&gt;
+				&lt;input type="text" name="nombre"&gt;
+			&lt;/form&gt;
+		</pre>
 		¿Cuál de las siguientes opciones es correcta?<br />
 		respuesta.php
-		<script type="syntaxhighlighter" class="brush: php"><![CDATA[
-			<?
-			echo 'valor: ' . $_GET['valor'] . '<br>';
-			echo 'valor: ' . $_POST['valor'] . '<br>';
-			echo 'valor: ' . $_REQUEST['valor'] . '<br>';
-			echo 'nombre: ' . $_GET['nombre'] . '<br>';
-			echo 'nombre: ' . $_POST['nombre'] . '<br>';
-			echo 'nombre: ' . $_REQUEST['nombre'] . '<br>';
-			?>
-		]]></script>
+		<pre class="brush: php">
+			&lt;?
+			echo 'valor: ' . $_GET['valor'] . '&lt;br&gt;';
+			echo 'valor: ' . $_POST['valor'] . '&lt;br&gt;';
+			echo 'valor: ' . $_REQUEST['valor'] . '&lt;br&gt;';
+			echo 'nombre: ' . $_GET['nombre'] . '&lt;br&gt;';
+			echo 'nombre: ' . $_POST['nombre'] . '&lt;br&gt;';
+			echo 'nombre: ' . $_REQUEST['nombre'] . '&lt;br&gt;';
+			?&gt;
+		</pre>
 	</blockquote>
 
 	<p>Son correctas las siguientes opciones:</p>
 
-	<script type="syntaxhighlighter" class="brush: php"><![CDATA[
-		echo ('valor: ' . $_GET['valor'] . '<br>');
-		echo 'valor: ' . $_REQUEST['valor'] . '<br>';
-		echo 'nombre: ' . $_POST['nombre'] . '<br>';
-		echo 'nombre: ' . $_REQUEST['nombre'] . '<br>';
-	]]></script>
+	<pre class="brush: php">
+		echo ('valor: ' . $_GET['valor'] . '&lt;br&gt;');
+		echo 'valor: ' . $_REQUEST['valor'] . '&lt;br&gt;';
+		echo 'nombre: ' . $_POST['nombre'] . '&lt;br&gt;';
+		echo 'nombre: ' . $_REQUEST['nombre'] . '&lt;br&gt;';
+	</pre>
 
 </div>
 
