@@ -41,4 +41,4 @@ foreach ($resultado as $r)
 ?>
 
 </body>
-</html>
+</html><?php exit(); ?>

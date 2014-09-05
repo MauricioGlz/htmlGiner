@@ -16,4 +16,4 @@ fclose($myfile);
 ?>
 
 </body>
-</html>
+</html><?php exit(); ?>
